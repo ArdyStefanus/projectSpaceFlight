@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_ProjectSpaceFlight_ProjectSpaceFlightUITests : NSObject
+@end
+@implementation PodsDummy_Pods_ProjectSpaceFlight_ProjectSpaceFlightUITests
+@end
