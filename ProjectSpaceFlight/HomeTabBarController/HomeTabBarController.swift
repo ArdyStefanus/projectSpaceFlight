@@ -34,8 +34,7 @@ class HomeTabBarController: UITabBarController {
     
     
     fileprivate func createNavController(for rootViewController: UIViewController, tabbarItem: UITabBarItem) -> UIViewController {
-        // if want to change the view become root in the future, use below
-        //        let navController = UINavigationController(rootViewController: rootViewController)
+        
         let navController = rootViewController
         navController.tabBarItem = tabbarItem
         return navController
