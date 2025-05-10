@@ -11,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBerandaVC" customModule="ProjectSpaceFlight" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="PJJ-oB-on9"/>
+                <outlet property="viewTappedArticle" destination="zVD-SJ-LEA" id="ink-Yo-IAN"/>
+                <outlet property="viewTappedBlog" destination="Vh7-4D-EFa" id="kXl-ve-Acc"/>
+                <outlet property="viewTappedReport" destination="J4k-UK-Ofy" id="irO-Zw-HUY"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -1,5 +1,5 @@
 //
-//  ListArticleVC.swift
+//  DetailReportVC.swift
 //  ProjectSpaceFlight
 //
 //  Created by Macbook Pro on 10/05/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListArticleVC: UIViewController {
+class DetailReportVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

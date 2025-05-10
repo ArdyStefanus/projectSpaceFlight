@@ -9,10 +9,11 @@ import UIKit
 
 struct NibFile {
     static let HOME_TABBAR = "HomeTabBarController"
-    
-    // MARK: DETAIL LIST GIM
-    static let DETAIL_CLAIM = "DetailListClaimVC"
-    
-    // MARK: CELL LIST GAME
-    static let LIST_CLAIM_CELL = "ListClaimCell"
+    static let LIST_ARTICLE = "ListArticleVC"
+    static let LIST_BLOG = "ListBlogVC"
+    static let LIST_REPORT = "ListReportVC"
+    static let DETAIL_ARTICLE = "DetailArticleVC"
+    static let DETAIL_BLOG = "DetailBlogVC"
+    static let DETAIL_REPORT = "DetailReportVC"
+    static let LIST_CELL = "ListArticleBlogCell"
 }

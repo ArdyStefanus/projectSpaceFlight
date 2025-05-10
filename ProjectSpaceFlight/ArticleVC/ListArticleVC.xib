@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListArticleVC" customModule="ProjectSpaceFlight" customModuleProvider="target">
             <connections>
+                <outlet property="loadingIndicator" destination="M5Z-bG-s7e" id="GqG-WP-O3j"/>
+                <outlet property="searchBar" destination="dNY-ZB-pth" id="Wop-ho-TL8"/>
+                <outlet property="tableViewListArticle" destination="Zoh-D5-gjO" id="Ukg-7j-qD6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
