@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ListArticleBlogCell: UITableViewCell {
 
@@ -13,7 +14,10 @@ class ListArticleBlogCell: UITableViewCell {
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var title: UILabel!
     
-    func setupCell (data: ArticleBlog) {
-        
+    func setupCell (data: NewsArticle) {
+        let url = URL.init(string: data.imageUrl)
+        imgViewCell.sd_setImage(with: url, placeholderImage: UIImage(contentsOfFile: "empty"))
+        title.text = data.title
+        category.text = data.newsSite
     }
 }

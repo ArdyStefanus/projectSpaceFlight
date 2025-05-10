@@ -9,9 +9,12 @@ import UIKit
 
 class TabBerandaVC: UIViewController {
     
+    @IBOutlet weak var labelGreeting: UILabel!
     @IBOutlet weak var viewTappedArticle: UIView!
     @IBOutlet weak var viewTappedBlog: UIView!
     @IBOutlet weak var viewTappedReport: UIView!
+    
+    let vm = TabBerandaVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,8 @@ class TabBerandaVC: UIViewController {
 
         let tapReport = UITapGestureRecognizer(target: self, action: #selector(handleTapReport))
         viewTappedReport.addGestureRecognizer(tapReport)
+        
+        labelGreeting.text = vm.getGreeting()
     }
     
     @objc func handleTapArticle() {

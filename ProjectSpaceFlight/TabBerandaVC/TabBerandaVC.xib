@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBerandaVC" customModule="ProjectSpaceFlight" customModuleProvider="target">
             <connections>
+                <outlet property="labelGreeting" destination="ZrX-gC-aJw" id="AWm-cq-t88"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="PJJ-oB-on9"/>
                 <outlet property="viewTappedArticle" destination="zVD-SJ-LEA" id="ink-Yo-IAN"/>
                 <outlet property="viewTappedBlog" destination="Vh7-4D-EFa" id="kXl-ve-Acc"/>
@@ -108,7 +109,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one do want read?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8C4-B4-gMZ">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one do you want read?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8C4-B4-gMZ">
                     <rect key="frame" x="70" y="135" width="253" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="xon-2t-lNq"/>

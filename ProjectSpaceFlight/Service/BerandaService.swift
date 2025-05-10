@@ -12,7 +12,7 @@ class ArticleListService {
     static let shared = ArticleListService()
     
     func getAvailableListArticle(completion: @escaping ([JSON]) -> ()) {
-        let request: URLRequest = RESTConfig.shared.requestConfig(endpoint: ARTICLE_BASE_SERVER, method: RESTConfig.HTTPMethod.GET, parameters: nil)
+        let request: URLRequest = RESTConfig.shared.requestConfig(endpoint: ARTICLE_BASE_SERVER + "?format=json", method: RESTConfig.HTTPMethod.GET, parameters: nil)
         
         AF.request(request).response { response in
             switch response.result {

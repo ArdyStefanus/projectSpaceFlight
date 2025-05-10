@@ -25,6 +25,10 @@ class ListArticleVC: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    @IBAction func back(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func setupView(){
         searchBar.resignFirstResponder()
         searchBar.isUserInteractionEnabled = true
@@ -76,7 +80,7 @@ extension ListArticleVC: UISearchBarDelegate {
         if searchText.isEmpty {
             vm.searchFilterArticle.value = vm.arrListArticle.value
         } else {
-            vm.searchFilterArticle.value = vm.arrListArticle.value.filter {                $0.report.title.lowercased().contains(searchText.lowercased())
+            vm.searchFilterArticle.value = vm.arrListArticle.value.filter {                $0.title.lowercased().contains(searchText.lowercased())
             }
             tableViewListArticle.reloadData()
         }

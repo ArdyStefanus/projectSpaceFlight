@@ -21,10 +21,55 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" placeholder="Search Claim Title" translatesAutoresizingMaskIntoConstraints="NO" id="dNY-ZB-pth">
-                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zoh-D5-gjO">
+                    <rect key="frame" x="0.0" y="167" width="393" height="685"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-bG-s7e">
+                    <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn7-7U-XOy">
+                    <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-fC-w9C">
+                            <rect key="frame" x="8" y="10" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="kCp-HT-R6m"/>
+                            </constraints>
+                            <state key="normal" image="arrow_back"/>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="BDn-3i-VXm"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd1-dL-OMn">
+                            <rect key="frame" x="63.999999999999993" y="13.666666666666671" width="74.333333333333286" height="29"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="Q6y-vX-KtG"/>
+                        <constraint firstAttribute="height" constant="56" id="0io-BQ-31f"/>
+                        <constraint firstItem="wd1-dL-OMn" firstAttribute="centerY" secondItem="Jn7-7U-XOy" secondAttribute="centerY" id="6b5-DS-n98"/>
+                        <constraint firstAttribute="bottom" secondItem="xSl-fC-w9C" secondAttribute="bottom" constant="10" id="Jaf-mS-ABt"/>
+                        <constraint firstItem="xSl-fC-w9C" firstAttribute="top" secondItem="Jn7-7U-XOy" secondAttribute="top" constant="10" id="Tlj-iJ-yJk"/>
+                        <constraint firstItem="xSl-fC-w9C" firstAttribute="leading" secondItem="Jn7-7U-XOy" secondAttribute="leading" constant="8" id="fy6-3V-N5J"/>
+                        <constraint firstItem="wd1-dL-OMn" firstAttribute="leading" secondItem="xSl-fC-w9C" secondAttribute="trailing" constant="20" id="qFG-3T-kac"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="NO"/>
+                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                            <size key="value" width="0.0" height="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                            <real key="value" value="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <searchBar contentMode="redraw" placeholder="Search Article Title" translatesAutoresizingMaskIntoConstraints="NO" id="dNY-ZB-pth">
+                    <rect key="frame" x="0.0" y="115" width="393" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jOV-cz-rtm"/>
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                     <scopeButtonTitles>
@@ -32,31 +77,28 @@
                         <string>Title</string>
                     </scopeButtonTitles>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zoh-D5-gjO">
-                    <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-bG-s7e">
-                    <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
-                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Zoh-D5-gjO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9rw-D0-CST"/>
-                <constraint firstItem="Zoh-D5-gjO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="CKr-uI-7b5"/>
-                <constraint firstItem="Zoh-D5-gjO" firstAttribute="top" secondItem="dNY-ZB-pth" secondAttribute="bottom" symbolic="YES" id="Ca4-H5-89y"/>
-                <constraint firstAttribute="bottom" secondItem="Zoh-D5-gjO" secondAttribute="bottom" id="Xu1-0S-TvR"/>
-                <constraint firstItem="dNY-ZB-pth" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Xvn-AP-P8y"/>
-                <constraint firstItem="dNY-ZB-pth" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Zt5-QW-9On"/>
+                <constraint firstAttribute="bottom" secondItem="Zoh-D5-gjO" secondAttribute="bottom" id="Czz-Uz-OfE"/>
+                <constraint firstItem="Zoh-D5-gjO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HWN-s1-PBh"/>
+                <constraint firstItem="Jn7-7U-XOy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XsG-Oy-lcQ"/>
                 <constraint firstItem="M5Z-bG-s7e" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="afg-KQ-k7h"/>
-                <constraint firstItem="dNY-ZB-pth" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b3e-Fc-RJL"/>
+                <constraint firstItem="Zoh-D5-gjO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="buZ-xZ-xKB"/>
+                <constraint firstItem="dNY-ZB-pth" firstAttribute="top" secondItem="Jn7-7U-XOy" secondAttribute="bottom" id="dBQ-np-Nae"/>
+                <constraint firstItem="dNY-ZB-pth" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hsu-Qx-LaW"/>
                 <constraint firstItem="M5Z-bG-s7e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kvx-Cc-x6C"/>
+                <constraint firstItem="Jn7-7U-XOy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pUW-Vw-eIN"/>
+                <constraint firstItem="dNY-ZB-pth" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tcq-J0-cyT"/>
+                <constraint firstItem="Jn7-7U-XOy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="u2B-UC-Gkx"/>
+                <constraint firstItem="Zoh-D5-gjO" firstAttribute="top" secondItem="dNY-ZB-pth" secondAttribute="bottom" constant="8" id="wdg-ln-28t"/>
             </constraints>
-            <point key="canvasLocation" x="127" y="20"/>
+            <point key="canvasLocation" x="125.95419847328243" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="arrow_back" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
