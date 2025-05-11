@@ -71,6 +71,7 @@ extension ListArticleVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailArticleVC(nibName: NibFile.DETAIL_ARTICLE, bundle: nil)
+        vc.vm.detailListArticle = vm.searchFilterArticle.value[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }

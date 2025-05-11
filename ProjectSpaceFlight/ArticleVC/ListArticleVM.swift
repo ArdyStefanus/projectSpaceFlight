@@ -18,7 +18,6 @@ class ListArticleVM {
             for i in 0 ..< data.count {
                 self.arrListArticle.value.append(NewsArticle.init(json: data[i]))
             }
-            print("ini data JSON: \(self.arrListArticle.value)")
             self.loading.value = false
         }
     }

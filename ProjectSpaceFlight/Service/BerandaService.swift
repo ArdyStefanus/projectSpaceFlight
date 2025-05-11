@@ -31,7 +31,7 @@ class BlogListService {
     static let shared = BlogListService()
     
     func getAvailableListBlog(completion: @escaping ([JSON]) -> ()) {
-        let request: URLRequest = RESTConfig.shared.requestConfig(endpoint: BLOG_BASE_SERVER, method: RESTConfig.HTTPMethod.GET, parameters: nil)
+        let request: URLRequest = RESTConfig.shared.requestConfig(endpoint: BLOG_BASE_SERVER + "?format=json", method: RESTConfig.HTTPMethod.GET, parameters: nil)
         
         AF.request(request).response { response in
             switch response.result {
@@ -50,7 +50,7 @@ class ReportListService {
     static let shared = ReportListService()
     
     func getAvailableListReport(completion: @escaping ([JSON]) -> ()) {
-        let request: URLRequest = RESTConfig.shared.requestConfig(endpoint: REPORT_BASE_SERVER, method: RESTConfig.HTTPMethod.GET, parameters: nil)
+        let request: URLRequest = RESTConfig.shared.requestConfig(endpoint: REPORT_BASE_SERVER + "?format=json", method: RESTConfig.HTTPMethod.GET, parameters: nil)
         
         AF.request(request).response { response in
             switch response.result {

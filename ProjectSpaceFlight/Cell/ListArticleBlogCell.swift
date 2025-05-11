@@ -15,8 +15,18 @@ class ListArticleBlogCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     
     func setupCell (data: NewsArticle) {
-        let url = URL.init(string: data.imageUrl)
-        imgViewCell.sd_setImage(with: url, placeholderImage: UIImage(contentsOfFile: "empty"))
+        imgViewCell.sd_setImage(
+            with: URL(string: data.imageUrl),
+            placeholderImage: UIImage(named: "empty"),
+            options: [],
+            completed: { image, error, cacheType, url in
+                if error != nil {
+                    // Gagal load image dari URL, set gambar default
+                    self.imgViewCell.image = UIImage(named: "empty")
+                }
+            }
+        )
+        
         title.text = data.title
         category.text = data.newsSite
     }
